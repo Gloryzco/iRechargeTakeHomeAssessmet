@@ -30,6 +30,6 @@ class PaymentTest extends TestCase
         ];
         $response = $this->Json('POST','/api/customer/'.$customer->id.'/payment', $paymentData);
         $response->assertStatus(201);
-        $this->assertEquals(true, strtolower($response['message']));
+        $this->assertEquals(true, ($response['message']));
     }
 }
