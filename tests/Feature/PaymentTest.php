@@ -20,6 +20,11 @@ class PaymentTest extends TestCase
     {
         $customer = Customer::factory()->create();
         $paymentData = [
+            "card_number" => "5061460410120223210",
+            "cvv" => "780",
+            "expiry_month" => "12",
+            "expiry_year" => "31",
+            "currency" => "NGN",
             "transaction_id" => Str::random(16),
             "amount" => 200,
         ];
