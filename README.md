@@ -1,7 +1,7 @@
 # How to set this project on your local machine
 - To set up this project on your local machine, follow the guide below
 
-## Requirments
+## Requirements
 - "php": "^7.3|^8.0"
 - "laravel/framework": "^8.75"
 - MySql
