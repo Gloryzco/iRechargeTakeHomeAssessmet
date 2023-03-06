@@ -15,12 +15,14 @@ class CreatePaymentsTable extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('customer_id')->constrained()->onDelete('cascade');
+            $table->unsignedBigInteger('customer_id');
             $table->string('transaction_id');
             $table->string('payment_ref');
             $table->float('amount', 5, 2);
             $table->enum("status", ["in_progress", "successful", "failed", "pending"])->default("in_progress");
             $table->timestamps();
+            
+            $table->foreign('customer_id')->references('id')->on('customers');
         });
     }
 
