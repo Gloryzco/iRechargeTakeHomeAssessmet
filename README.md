@@ -13,7 +13,7 @@
 - navigate to the .env file, setup your db connection and include your FLUTTERWAVE_ENCRYPTION_KEY and FLUTTERWAVE_SECRET_KEY
 - generate a default application key with ``` php artisan key:generate ```
 - migrate database with ``` php artisan migrate ```
-- load the database with some basic data ``` php artisan migrate --seed ```
+- load the database with some basic data ``` php artisan db:seed --class=CustomerSeeder ```
 - serve the application with ``` php artisan serve ```
 
 ## API collections and documentation 
